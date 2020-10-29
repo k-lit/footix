@@ -1,0 +1,658 @@
+/* ----------------BODY---------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+/*---------------- NAVBAR---------------- */
+
+.bg-img-match {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/image/header_pic.jpg");
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+
+  /* Centrer et dimensionner l'image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img-bar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/image/bar_7.jpg");
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+
+  /* Centrer et dimensionner l'image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-img {
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+}
+/* Navbar container */
+.navbar {
+  background-color: rgb(253, 218, 51);
+  font-family: "Bebas Neue", sans-serif;
+  padding: 15px;
+}
+
+/* Liens navbar */
+.navbar a {
+  float: left;
+  font-size: 30px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Dropdown container */
+.dropdown {
+  float: right;
+  padding-top: 5px;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 30px;
+  font-family: "Bebas Neue", cursive;
+  color: black;
+  padding: 14px;
+}
+
+/* Ajouter un fond sur les liens navbar on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: white;
+  border-radius: 15px 50px 30px;
+}
+
+/* Menu ropdown (caché par défaut) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 180px;
+}
+
+/* Liens du menu dropdown */
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  text-align: left;
+}
+
+/* Ajouter background color sur liens du menu on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Afficher dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  text-align: center;
+  padding: 200px;
+}
+
+input {
+  width: 80vh;
+  height: 10vh;
+  font-size: 20px;
+  border-radius: 15px 50px 30px;
+}
+
+input[placeholder] {
+  margin-left: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-style: italic;
+}
+
+#btn-search {
+  margin-left: 15px;
+  height: 10vh;
+  width: 20vh;
+  color: black;
+  background-color: #ffffff;
+  border-radius: 15px 50px 30px;
+  padding: 5px;
+  border: 1px solid #7fb7dc;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+button:focus,
+input:focus {
+  outline: 0;
+}
+
+/* ----------------CAROUSSEL---------------- */
+
+#myCarousel .carousel-item .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-attachment: fixed;
+}
+#myCarousel h4 {
+  font-size: 50px;
+  margin-bottom: 15px;
+  color: #fff;
+  line-height: 100%;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+#myCarousel p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #d5d5d5;
+}
+#myCarousel .carousel-item a {
+  background: rgb(253, 218, 51);
+  font-size: 14px;
+  color: black;
+  padding: 13px 32px;
+  display: inline-block;
+}
+#myCarousel .carousel-item a:hover {
+  background: white;
+  text-decoration: none;
+}
+
+#myCarousel .carousel-item h4 {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+#myCarousel .carousel-item p {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+#myCarousel .carousel-item a {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+#myCarousel .carousel-item .mask img {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+#myCarousel h4,
+#myCarousel p,
+#myCarousel a,
+#myCarousel .carousel-item .mask img {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1.2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+#myCarousel .container {
+  max-width: 1430px;
+}
+#myCarousel .carousel-item {
+  height: 100%;
+  min-height: 550px;
+}
+#myCarousel {
+  position: relative;
+  z-index: 1;
+  background: #1e130c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #9a8478,
+    #1e130c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #9a8478,
+    #1e130c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  background-size: cover;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  height: 40px;
+  width: 40px;
+  padding: 12px;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  background-color: rgb(253, 218, 51);
+}
+
+/* ----------------TEAM CARDS---------------- */
+
+#team {
+  background: #eee !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: rgb(253, 218, 51);
+  border-color: rgb(253, 218, 51);
+  box-shadow: none;
+  outline: none;
+}
+
+.btn-primary {
+  color: black;
+  background-color: rgb(253, 218, 51);
+  border-color: rgb(253, 218, 51);
+}
+
+section {
+  padding: 60px 0;
+}
+
+section .section-title {
+  text-align: center;
+  color: black;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+#team .card {
+  border: none;
+  background: #ffffff;
+}
+
+.image-flip:hover .backside,
+.image-flip.hover .backside {
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  border-radius: 0.25rem;
+}
+
+.image-flip:hover .frontside,
+.image-flip.hover .frontside {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.mainflip {
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -moz-transition: 1s;
+  -moz-transform: perspective(1000px);
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.frontside {
+  position: relative;
+  -webkit-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  z-index: 2;
+  margin-bottom: 30px;
+}
+
+.backside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -o-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+  -webkit-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  -moz-box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+  box-shadow: 5px 7px 9px -4px rgb(158, 158, 158);
+}
+
+.frontside,
+.backside {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 1s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transition: 1s;
+  -moz-transform-style: preserve-3d;
+  -o-transition: 1s;
+  -o-transform-style: preserve-3d;
+  -ms-transition: 1s;
+  -ms-transform-style: preserve-3d;
+  transition: 1s;
+  transform-style: preserve-3d;
+}
+
+.frontside .card,
+.backside .card {
+  min-height: 312px;
+}
+
+.backside .card a {
+  font-size: 18px;
+  color: black !important;
+}
+
+.frontside .card .card-title,
+.backside .card .card-title {
+  color: black !important;
+}
+
+.frontside .card .card-body img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+button {
+  border: none;
+  padding: 8px;
+  color: black;
+  background-color: rgb(253, 218, 51);
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+h6 {
+  color: grey;
+  font-size: 20px;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+/* ----------------FORM---------------- */
+
+form {
+  border: 4px solid #f1f1f1;
+  background-color: rgb(253, 218, 51);
+  height: 550px;
+  text-align: center;
+}
+
+.contact-form {
+  border: 4px solid #f1f1f1;
+  background-color: #eee;
+  height: 650px;
+  text-align: center;
+}
+
+input[type="textarea"] {
+  margin: auto;
+  padding: 60px;
+  margin-top: 5px;
+  border-radius: 15px 20px 15px;
+}
+
+.container {
+  padding: 20px;
+}
+
+/* Styliser le bouton subscribe */
+input[type="text"],
+input[type="submit"] {
+  width: 50%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Ajouter une marge au checkbox  */
+input[type="checkbox"] {
+  margin-top: 16px;
+  max-width: 20px;
+  max-height: 20px;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  opacity: 0.8;
+}
+
+/* ----------------FOOTER---------------- */
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-around;
+  text-decoration: none;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+li {
+  list-style-type: none;
+  padding: 12px;
+}
+
+footer a {
+  color: white;
+  font-size: 15px;
+}
+
+.footer_icons a {
+  padding: 20px;
+  margin-left: 50px;
+  text-decoration: none;
+}
+
+/* ----------------CAROUSSEL ANIMATIONS---------------- */
+/* 
+.carousel-item {
+  position: relative;
+  display: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+.carousel-fade .carousel-item {
+  opacity: 0;
+  -webkit-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right,
+.carousel-fade .carousel-item.active {
+  opacity: 1;
+}
+.carousel-fade .carousel-item-left.active,
+.carousel-fade .carousel-item-right.active {
+  opacity: 0;
+}
+.carousel-fade .carousel-item-left.active,
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item-prev.active,
+.carousel-fade .carousel-item.active {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+@supports (transform-style: preserve-3d) {
+  .carousel-fade .carousel-item-left.active,
+  .carousel-fade .carousel-item-next,
+  .carousel-fade .carousel-item-prev,
+  .carousel-fade .carousel-item-prev.active,
+  .carousel-fade .carousel-item.active {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.carousel-fade .carousel-item-left.active,
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item-prev.active,
+.carousel-fade .carousel-item.active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+} */

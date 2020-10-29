@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>⚽ Footix</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script
+      src="https://kit.fontawesome.com/a41e9403cf.js"
+      crossorigin="anonymous"
+    ></script>
+  
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <div class="bg-img-match">
+      <div class="navbar">
+        <a href="home"> <i class="fas fa-home"></i> </a>
+        <a href="matchs">Les matchs</a>
+        <a href="bars">Les bars</a>
+        <a href="contact">Contacts</a>
+        <a class="login" href="login">
+          <%= username %>
+            <i class="far fa-address-card"></i>
+        </a>
+        <div class="dropdown">
+          <button class="dropbtn">Mes équipes favorites
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#match_pointer">Marseille</a>
+            <a href="#match_pointer">Arsenal</a>
+            <a href="#match_pointer">Real Madrid</a>
+          </div>
+        </div>
+      </div>
+        <div class="search-bar">
+          <input
+            id="new-search"
+            type="text"
+            value=""
+            placeholder="Chercher un match ou un lieu"
+          />
+          <a href="#match_pointer"><button id="btn-search" type="button">Valider</button></a>
+        </div>
+    </div>
+
+   
+<section id="team" class="pb-5">
+  <div class="container">
+      <h5 class="section-title h1">Les matchs à venir</h5>
+      <div id="match_pointer"></div>
+      <div class="row">
+          <!-- Match card -->
+          <% for(var i=0;i<dataMatchs.length;i++) { %>
+          <div class="col-xs-12 col-sm-6 col-md-4">
+              <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                  <div class="mainflip">
+                      <div class="frontside">
+                          <div class="card">
+                              <div class="card-body text-center">
+                                  <p><img class=" img-fluid" src="<%= dataMatchs[i].url%>" alt="card image"></p>
+                                  <h4 class="card-title"><%= dataMatchs[i].name%></h4>
+                                  <p class="card-text"><%= dataMatchs[i].date%></p>
+                                  <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="backside">
+                          <div class="card">
+                              <div class="card-body text-center mt-4">
+                                  <h4 class="card-title"><%= dataMatchs[i].name%></h4>
+                                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio molestias nemo, sed voluptatum corporis dolorum ratione, pariatur quibusdam est alias unde sit voluptates!</p>
+                                  <a href="/bars" class="btn btn-primary btn-sm"> Trouver un bar qui diffuse</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <% } %>
+          
+          <!-- ./Match card -->
+      </div>
+      <a href="bars" class="btn btn-primary btn-sm"
+      ><i class="fa fa-plus"></i> Afficher plus</a
+    >
+  </div>
+</section>
+    <form action="newsletter">
+      <div class="container">
+        <h2>Inscrivez-vous à notre Newsletter</h2>
+        <p>Recevez directement dans votre boîte mail le programme des matchs de la semaine et les nouveaux lieux pour suivre tous vos matchs préférés !!</p>
+      </div>
+    
+      <div class="container">
+        <input type="text" placeholder="Name" name="name" required>
+        <input type="text" placeholder="Email address" name="mail" required>
+        <label>
+          <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+        </label>
+      </div>
+    
+      <div class="container">
+        <input type="submit" value="Subscribe">
+      </div>
+    </form>
+   
+    <footer class="footer">
+      <ul>
+        <li class="footer_items"><a href="#">Nous contacter</a></li>
+        <li class="footer_items"><a href="#">Nous rejoindre</a></li>
+        <li class="footer_items"><a href="#">Conditions générales</a></li>
+      </ul>
+      <div class="footer_icons">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/?lang=fr"><i class="fab fa-twitter-square"></i></a>
+      </div>
+    </footer>
+    <script src = "/javascripts/script.js">
+    </script>
+  </body>
+</html>
