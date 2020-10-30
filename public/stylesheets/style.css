@@ -439,7 +439,8 @@ input[type="textarea"] {
 
 /* Styliser le bouton subscribe */
 input[type="text"],
-input[type="submit"] {
+input[type="submit"],
+input[type="password"] {
   width: 50%;
   padding: 12px;
   margin: 8px 0;
